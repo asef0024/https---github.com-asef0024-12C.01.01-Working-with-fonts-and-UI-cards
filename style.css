@@ -1,0 +1,321 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(48, 48, 48);
+  --color-dark: rgb(64, 64, 64);
+  --color-light: rgb(231, 230, 230);
+  --color-lighter: rgb(255, 255, 255);
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+}
+
+/* Fonts */
+h1,
+h2,
+h3 {
+  color: var(--color-darker);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.815rem;
+  margin-bottom: 1.4rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+  margin-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+p {
+  color: var(--color-dark);
+  line-height: 1.6rem;
+  font-family: "Inconsolata", monospace4;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+.info_text button {
+  margin-top: 1.5rem;
+}
+
+.light_button {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+  margin-right: 2rem;
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-darker);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+}
+
+.header_text {
+  width: 40vw;
+  min-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.header_text h1 {
+  color: var(--color-lighter);
+  margin-top: 2rem;
+}
+
+.header_text p {
+  color: var(--color-light);
+}
+
+.header_graphics {
+  width: 25vw;
+  height: 25vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+}
+
+.intro_text {
+  width: 100vwvw;
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+}
+
+/* cards */
+
+#card_container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--color-light);
+  width: 80vw;
+  height: 90vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+@media (min-width: 800px) {
+  /* Sections */
+  #intro {
+    display: flex;
+    min-height: 80vh;
+    padding: 0px 15rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--color-light);
+  }
+
+  .intro_text {
+    width: 40vw;
+  }
+
+  .intro_graphics {
+    width: 15vw;
+    height: 15vw;
+    min-width: 150px;
+    min-height: 150px;
+    background-color: var(--color-dark);
+  }
+
+  #cards {
+    min-height: 80vh;
+    padding: 5rem 2rem;
+  }
+
+  .card {
+    background-color: var(--color-light);
+    width: 18vw;
+    height: 65vh;
+    padding: 1rem;
+    /* display: flex;
+  flex-direction: column; */
+  }
+  .card:hover {
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card_image {
+    width: 18vw;
+    box-shadow: 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card_name {
+    margin-top: 1rem;
+  }
+
+  .card_slogan {
+    font-style: italic;
+    font-size: small;
+    margin-bottom: 0.7rem;
+    line-height: 1rem;
+  }
+
+  .card_title {
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+
+  #card_container {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: end;
+  }
+
+  .buttons {
+    margin-top: 2rem;
+  }
+
+  .card_button_positive {
+    background-color: var(--color-darker);
+    color: var(--color-lighter);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .card_button_negative {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact h2 {
+  width: 25ch;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
